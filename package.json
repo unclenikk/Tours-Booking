@@ -7,8 +7,8 @@
     "start": "nodemon server.js",
     "start:prod": "cross-env NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
-    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --no-source-maps",
-    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --no-source-maps"
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "Nika Amrazishvili",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "@stripe/stripe-js": "^8.4.0",
     "axios": "^1.13.1",
     "bcryptjs": "^3.0.2",
+    "compression": "^1.8.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",

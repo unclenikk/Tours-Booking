@@ -1,3 +1,4 @@
+const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const express = require('express');
@@ -88,6 +89,8 @@ const limiter = rateLimit({
     'Too many requests from this IP, please try again in a hour!'
 });
 app.use('/api', limiter);
+
+app.use(compression());
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
